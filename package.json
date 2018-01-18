@@ -1,20 +1,24 @@
 {
   "name": "title",
+  "private": true,
   "version": "1.0.0",
   "description": "A service for capitalizing your title properly",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zeit/title.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zeit/title/issues"
-  },
-  "homepage": "https://github.com/zeit/title#readme"
+  "repository": "zeit/title",
+  "keywords": [
+    "title",
+    "capitalize",
+    "chicago",
+    "manual",
+    "of",
+    "style"
+  ],
+  "author": "leo",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
 }
