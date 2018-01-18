@@ -1,0 +1,20 @@
+{
+  "name": "title",
+  "version": "1.0.0",
+  "description": "A service for capitalizing your title properly",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeit/title.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeit/title/issues"
+  },
+  "homepage": "https://github.com/zeit/title#readme"
+}
