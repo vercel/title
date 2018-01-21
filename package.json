@@ -2,11 +2,8 @@
   "name": "title",
   "private": true,
   "version": "1.0.0",
-  "description": "A service for capitalizing your title properly",
+  "description": "Capitalize your titles properly",
   "main": "index.js",
-  "scripts": {
-    "start": "nodemon index.js"
-  },
   "repository": "zeit/title",
   "keywords": [
     "title",
@@ -20,5 +17,8 @@
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^1.14.11"
+  },
+  "dependencies": {
+    "titleize": "^1.0.0"
   }
 }
