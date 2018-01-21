@@ -2,10 +2,12 @@
   "name": "title",
   "version": "0.1.0",
   "description": "Capitalize your titles properly",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
   "repository": "zeit/title",
   "scripts": {
-    "start": "next site",
+    "start": "next start",
+    "build": "next build",
+    "dev": "next",
     "test": "ava"
   },
   "keywords": [
@@ -15,6 +17,13 @@
     "manual",
     "of",
     "style"
+  ],
+  "bin": {
+    "title": "./bin/title.js"
+  },
+  "files": [
+    "module",
+    "cli"
   ],
   "author": "leo",
   "license": "MIT",
