@@ -2,7 +2,7 @@
 const test = require('ava')
 
 // Source
-const title = require('../lib')
+const title = require('../module')
 
 test(t => {
   const from = 'aPi 2.0: lOG-in with zeit, new dOCs & more'
