@@ -2,7 +2,7 @@
   "name": "title",
   "version": "0.1.0",
   "description": "Capitalize your titles properly",
-  "main": "./lib/index.js",
+  "main": "./module/index.js",
   "repository": "zeit/title",
   "scripts": {
     "start": "next start",
