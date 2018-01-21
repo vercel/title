@@ -1,9 +1,8 @@
 {
   "name": "title",
-  "private": true,
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Capitalize your titles properly",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": "zeit/title",
   "keywords": [
     "title",
@@ -15,10 +14,7 @@
   ],
   "author": "leo",
   "license": "MIT",
-  "devDependencies": {
-    "nodemon": "^1.14.11"
-  },
   "dependencies": {
-    "titleize": "^1.0.0"
+    "titleize": "1.0.0"
   }
 }
