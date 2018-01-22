@@ -32,3 +32,10 @@ test(t => {
 
   t.is(title(from), to)
 })
+
+test(t => {
+  const from = 'capitalize your titles'
+  const to = 'Capitalize Your Titles'
+
+  t.is(title(from), to)
+})
