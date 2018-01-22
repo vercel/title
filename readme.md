@@ -17,7 +17,9 @@ Then load it and convert any input:
 const convert = require('@zeit/title')
 
 title('noW deSktop and now cLI are prODUCts of zeIt')
-// Now Desktop and Now CLI Are Products of ZEIT
+
+// Will result in:
+// "Now Desktop and Now CLI Are Products of ZEIT"
 ```
 
 That's it!
@@ -34,7 +36,9 @@ Next, run it:
 
 ```bash
 title "noW deSktop and now cLI are prODUCts of zeIt"
-# Now Desktop and Now CLI Are Products of ZEIT
+
+# Will result in:
+# "Now Desktop and Now CLI Are Products of ZEIT"
 ```
 
 To see all available options, run:
