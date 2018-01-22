@@ -17,7 +17,7 @@ const { _, ...args } = parse({
   '--no-copy': Boolean,
   '-v': '--version',
   '-h': '--help',
-  '-c': '--no-copy'
+  '-n': '--no-copy'
 })
 
 // Output the package's version if
