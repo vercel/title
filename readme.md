@@ -50,7 +50,7 @@ title -h
 ## Contributing
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device
-2. Uninstall `title` if it's already installed: `yarn global remove title`
+2. Uninstall `title` if it's already installed: `yarn global remove @zeit/title`
 3. Link it to the global module directory: `yarn link`
 
 After that, you can use the `title` command everywhere.
