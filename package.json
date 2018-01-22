@@ -2,12 +2,9 @@
   "name": "title",
   "version": "0.1.0",
   "description": "Capitalize your titles properly",
-  "main": "./module/index.js",
+  "main": "./lib/index.js",
   "repository": "zeit/title",
   "scripts": {
-    "start": "next start",
-    "build": "next build",
-    "dev": "next",
     "test": "ava"
   },
   "keywords": [
@@ -28,6 +25,9 @@
   "author": "leo",
   "license": "MIT",
   "dependencies": {
+    "arg": "1.0.0",
+    "chalk": "2.3.0",
+    "clipboardy": "1.2.2",
     "titleize": "1.0.0"
   },
   "devDependencies": {
