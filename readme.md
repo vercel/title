@@ -1,7 +1,7 @@
 # title
 
 This package correctly capitalizes your titles as per [The Chicago Manual of Style](http://www.chicagomanualofstyle.org/home.html). Furthermore, all of
-ZEIT's product names are capitalized properly as well automatically.
+ZEIT's product names are capitalized properly as well.
 
 ## Usage
 
@@ -24,7 +24,7 @@ title('noW deSktop and now cLI are prODUCts of zeIt')
 
 That's it!
 
-### CLI
+### Command Line
 
 You can also convert titles in the command line, if you want. Install the package globally:
 
