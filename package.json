@@ -31,9 +31,6 @@
     "titleize": "1.0.0"
   },
   "devDependencies": {
-    "ava": "0.24.0",
-    "next": "4.2.3",
-    "react": "16.2.0",
-    "react-dom": "16.2.0"
+    "ava": "0.24.0"
   }
 }
