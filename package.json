@@ -19,8 +19,8 @@
     "title": "./bin/title.js"
   },
   "files": [
-    "module",
-    "cli"
+    "bin",
+    "lib"
   ],
   "author": "leo",
   "license": "MIT",
