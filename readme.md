@@ -57,4 +57,5 @@ After that, you can use the `title` command everywhere.
 
 ## Author
 
-Leo Lamprecht ([@notquiteleo](https://twitter.com/notquiteleo)) - [ZEIT](https://zeit.co)
+- Leo Lamprecht ([@notquiteleo](https://twitter.com/notquiteleo)) - [ZEIT](https://zeit.co)
+- Josh Junon ([@Qix-](https://github.com/Qix-)) - [ZEIT](https://zeit.co)
