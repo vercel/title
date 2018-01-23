@@ -1,5 +1,5 @@
 {
-  "name": "@zeit/title",
+  "name": "title",
   "version": "2.0.1",
   "description": "Capitalize your titles properly",
   "main": "./lib/index.js",
