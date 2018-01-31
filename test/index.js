@@ -18,7 +18,6 @@ test(t => {
   t.is(title(from), to)
 })
 
-
 test(t => {
   const from = 'toWArds NEXT.JS 5: Introducing cANaRY Updates'
   const to = 'Towards Next.js 5: Introducing Canary Updates'
@@ -38,4 +37,22 @@ test(t => {
   const to = 'Capitalize Your Titles'
 
   t.is(title(from), to)
+})
+
+test(t => {
+  const from = 'mY cusToM brand is awesome'
+  const to = 'My Custom BRAnD Is awesoMe'
+
+  t.is(title(from, {
+    specials: ['BRAnD', 'awesoMe']
+  }), to)
+})
+
+test(t => {
+  const from = 'modify speCials like Zeit or Next.js'
+  const to = 'Modify Specials like Zeit or Next.js'
+
+  t.is(title(from, {
+    specials: ['Zeit', 'Next.js']
+  }), to)
 })

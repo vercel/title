@@ -6,7 +6,7 @@ const { red, grey, blue } = require('chalk')
 const clipboardy = require('clipboardy')
 
 // Utilities
-const package = require('../package')
+const pkg = require('../package')
 const convert = require('../')
 const help = require('../lib/help')
 
@@ -15,6 +15,7 @@ const { _, ...args } = parse({
   '--version': Boolean,
   '--help': Boolean,
   '--no-copy': Boolean,
+  '--special': [String],
   '-v': '--version',
   '-h': '--help',
   '-n': '--no-copy'
@@ -23,7 +24,7 @@ const { _, ...args } = parse({
 // Output the package's version if
 // the `--version was supplied
 if (args['--version']) {
-  console.log(package.version)
+  console.log(pkg.version)
   process.exit(0)
 }
 
@@ -40,7 +41,9 @@ const main = async () => {
     process.exit(1)
   }
 
-  const output = convert(sub)
+  const specials = args['--special']
+
+  const output = convert(sub, {specials})
   const copy = !args['--no-copy']
 
   if (copy) {
