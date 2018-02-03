@@ -44,15 +44,15 @@ test(t => {
   const to = 'My Custom BRAnD Is awesoMe'
 
   t.is(title(from, {
-    specials: ['BRAnD', 'awesoMe']
+    special: ['BRAnD', 'awesoMe']
   }), to)
 })
 
 test(t => {
-  const from = 'modify speCials like Zeit or Next.js'
-  const to = 'Modify Specials like Zeit or Next.js'
+  const from = 'modify speCials like Facebook or microsoft'
+  const to = 'Modify Specials like facebook or Microsoft'
 
   t.is(title(from, {
-    specials: ['Zeit', 'Next.js']
+    special: ['facebook', 'Microsoft']
   }), to)
 })
