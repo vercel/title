@@ -43,7 +43,7 @@ const main = async () => {
 
   const specials = args['--special']
 
-  const output = convert(sub, {specials})
+  const output = convert(sub, { specials })
   const copy = !args['--no-copy']
 
   if (copy) {
