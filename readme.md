@@ -14,7 +14,7 @@ yarn add title
 Then load it and convert any input:
 
 ```js
-const convert = require('title')
+const title = require('title')
 
 title('noW deSktop and now cLI are prODUCts of zeIt')
 
