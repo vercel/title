@@ -22,6 +22,17 @@ title('noW deSktop and now cLI are prODUCts of zeIt')
 // "Now Desktop and Now CLI Are Products of ZEIT"
 ```
 
+You can even pass words that should be capitalized as specified:
+
+```js
+title('FaCEbook is great', {
+  special: [ 'facebook' ]
+})
+
+// Will result in:
+// "facebook is great"
+```
+
 That's it!
 
 ### Command Line
