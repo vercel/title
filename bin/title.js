@@ -34,7 +34,7 @@ if (args['--help']) {
 }
 
 const main = async () => {
-  const sub = _[0]
+  const sub = _.join(' ')
 
   if (!sub) {
     console.error(`${red('Error!')} Please specify an input: ${grey('title "input"')}`)
