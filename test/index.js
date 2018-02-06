@@ -56,3 +56,10 @@ test(t => {
     special: ['facebook', 'Microsoft']
   }), to)
 })
+
+test(t => {
+  const from = "seattle’S BEST coffee & grandma's cookies"
+  const to = "Seattle’s Best Coffee & Grandma's Cookies"
+
+  t.is(title(from), to)
+})
