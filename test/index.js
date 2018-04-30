@@ -64,9 +64,16 @@ test(t => {
   t.is(title(from), to)
 })
 
-test('should not capitalize word in adjacent parens', t => {
-  const from = "employment region(s) for my application"
-  const to = "Employment Region(s) for My Application"
+test("should not capitalize word in adjacent parens", t => {
+  let from = "employment region(s) for my application"
+  let to = "Employment Region(s) for My Application"
+  t.is(title(from), to)
 
+  from = "(s)omething or other"
+  to = "(s)omething or Other"
+  t.is(title(from), to)
+
+  from = "cat(s) can be a pain"
+  to = "Cat(s) can Be a Pain"
   t.is(title(from), to)
 })
