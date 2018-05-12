@@ -18,7 +18,8 @@ const { _, ...args } = parse({
   '--special': [String],
   '-v': '--version',
   '-h': '--help',
-  '-n': '--no-copy'
+  '-n': '--no-copy',
+  '-s': '--special'
 })
 
 // Output the package's version if
