@@ -3,7 +3,7 @@
   "version": "3.4.2",
   "description": "Capitalize your titles properly",
   "main": "./lib/index.js",
-  "repository": "zeit/title",
+  "repository": "vercel/title",
   "scripts": {
     "test": "ava"
   },
