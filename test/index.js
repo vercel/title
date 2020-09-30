@@ -77,3 +77,10 @@ test("should not capitalize word in adjacent parens", t => {
   to = "Cat(s) can Be a Pain"
   t.is(title(from), to)
 })
+
+test("should capitalize the last word, even if is in the lower-case.js" ,t => {
+  const from = "what on earth is going on"
+  const to = "What on Earth Is Going On"
+
+  t.is(title(from), to)
+})
