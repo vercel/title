@@ -77,3 +77,17 @@ test("should not capitalize word in adjacent parens", t => {
   to = "Cat(s) can Be a Pain"
   t.is(title(from), to)
 })
+
+test("should accept special unicode character 'ñ'" ,t => {
+  const from = "diseño"
+  const to = "Diseño"
+
+  t.is(title(from), to)
+})
+
+test("should accept accent mark" ,t => {
+  const from = "fernández"
+  const to = "Fernández"
+
+  t.is(title(from), to)
+})
