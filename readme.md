@@ -1,7 +1,7 @@
 # title
 
 This package correctly capitalizes your titles as per [The Chicago Manual of Style](http://www.chicagomanualofstyle.org/home.html). Furthermore, all of
-ZEIT's product names are capitalized properly as well.
+Vercel's product names are capitalized properly as well.
 
 ## Usage
 
@@ -16,10 +16,10 @@ Then load it and convert any input:
 ```js
 const title = require('title')
 
-title('noW deSktop and now cLI are prODUCts of zeIt')
+title('noW deSktop and now cLI are prODUCts of veRCeL')
 
 // Will result in:
-// "Now Desktop and Now CLI Are Products of ZEIT"
+// "Now Desktop and Now CLI Are Products of VERCEL"
 ```
 
 You can even pass words that should be capitalized as specified:
