@@ -1,4 +1,4 @@
-# title
+# Title
 
 This package correctly capitalizes your titles as per [The Chicago Manual of Style](http://www.chicagomanualofstyle.org/home.html). Furthermore, all of
 Vercel's product names are capitalized properly as well.
@@ -16,10 +16,10 @@ Then load it and convert any input:
 ```js
 const title = require('title')
 
-title('noW deSktop and now cLI are prODUCts of zeIt')
+title('tHe cHicaGo maNual oF StyLe')
 
 // Will result in:
-// "Now Desktop and Now CLI Are Products of ZEIT"
+// "The Chicago Manual of Style"
 ```
 
 You can even pass words that should be capitalized as specified:
@@ -46,10 +46,10 @@ yarn global add title
 Next, run it:
 
 ```bash
-title "noW deSktop and now cLI are prODUCts of zeIt"
+title "tHe cHicaGo maNual oF StyLe"
 
 # Will result in:
-# "Now Desktop and Now CLI Are Products of ZEIT"
+# "The Chicago Manual of Style"
 ```
 
 To see all available options, run:
