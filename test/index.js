@@ -77,3 +77,19 @@ test("should not capitalize word in adjacent parens", t => {
   to = "Cat(s) can Be a Pain"
   t.is(title(from), to)
 })
+
+test("should capitalize the last word regardless of syntax", t => {
+  let from, to;
+
+  from = "there and beyond"
+  to = "There and Beyond"
+  t.is(title(from), to)
+
+  from = "be careful what you wish for"
+  to = "Be Careful What You Wish For"
+  t.is(title(from), to)
+
+  from = "XYZ: what is it good for"
+  to = "XYZ: What Is It Good For"
+  t.is(title(from, { special: ["XYZ"] }), to)
+})
