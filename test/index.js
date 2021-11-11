@@ -93,3 +93,16 @@ test("should capitalize the last word regardless of syntax", t => {
   to = "XYZ: What Is It Good For"
   t.is(title(from, { special: ["XYZ"] }), to)
 })
+
+test("supports international characters", t => {
+  let from = "çeşme city"
+  let to = "Çeşme City"
+  t.is(title(from), to)
+
+  from = "la niña esta aquí"
+  to = "La Niña Esta Aquí"
+  t.is(title(from), to)
+
+  from = "forhandlingsmøde"
+  to = "Forhandlingsmøde"
+})
