@@ -106,4 +106,12 @@ test("supports international characters", t => {
   from = "forhandlingsmøde"
   to = "Forhandlingsmøde"
   t.is(title(from), to)
+
+  from = "đội"
+  to = "Đội"
+  t.is(title(from), to)
+
+  from = "tuyển"
+  to = "Tuyển"
+  t.is(title(from), to)
 })
