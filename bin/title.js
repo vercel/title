@@ -3,7 +3,6 @@
 // Packages
 const parse = require('arg')
 const { red, grey, blue } = require('chalk')
-const clipboardy = require('clipboardy')
 
 // Utilities
 const pkg = require('../package')
@@ -49,6 +48,8 @@ const main = async () => {
 
   if (copy) {
     try {
+      // To import an ES module into a CommonJS module.
+      const clipboardy = (await import('clipboardy')).default
       await clipboardy.write(output)
     } catch (err) {
       console.error(`${red('Error!')} Could not write to clipboard`)

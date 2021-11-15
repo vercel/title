@@ -27,7 +27,7 @@
   "dependencies": {
     "arg": "1.0.0",
     "chalk": "2.3.0",
-    "clipboardy": "1.2.2",
+    "clipboardy": "3.0.0",
     "titleize": "1.0.0"
   },
   "devDependencies": {
