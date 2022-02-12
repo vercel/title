@@ -66,7 +66,7 @@ title -h
 
 After that, you can use the `title` command everywhere.
 
-## Author
+## Authors
 
-- Leo Lamprecht ([@notquiteleo](https://twitter.com/notquiteleo)) - [Vercel](https://vercel.com)
+- Leo Lamprecht ([@notquiteleo](https://twitter.com/notquiteleo))
 - Josh Junon ([@Qix-](https://github.com/Qix-))
