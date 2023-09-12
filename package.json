@@ -2,11 +2,6 @@
   "name": "title",
   "version": "3.5.3",
   "description": "Capitalize your titles properly",
-  "main": "./lib/index.js",
-  "repository": "vercel/title",
-  "scripts": {
-    "test": "ava"
-  },
   "keywords": [
     "title",
     "capitalize",
@@ -15,6 +10,10 @@
     "of",
     "style"
   ],
+  "repository": "vercel/title",
+  "license": "MIT",
+  "author": "leo",
+  "main": "./lib/index.js",
   "bin": {
     "title": "./bin/title.js"
   },
@@ -22,8 +21,9 @@
     "bin",
     "lib"
   ],
-  "author": "leo",
-  "license": "MIT",
+  "scripts": {
+    "test": "ava"
+  },
   "dependencies": {
     "arg": "1.0.0",
     "chalk": "2.3.0",
