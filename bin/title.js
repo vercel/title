@@ -17,44 +17,48 @@ const { _, ...args } = parse({
   '-v': '--version',
   '-h': '--help',
   '-n': '--no-copy',
-  '-s': '--special'
-})
+  '-s': '--special',
+});
 
 // Output the package's version if
 // the `--version was supplied
 if (args['--version']) {
-  console.log(pkg.version)
-  process.exit(0)
+  console.log(pkg.version);
+  process.exit(0);
 }
 
 if (args['--help']) {
-  console.log(helpText)
-  process.exit(0)
+  console.log(helpText);
+  process.exit(0);
 }
 
 const main = async () => {
-  const sub = _.join(' ')
+  const sub = _.join(' ');
 
   if (!sub) {
-    console.error(`${chalk.red('Error!')} Please specify an input: ${chalk.grey('title "input"')}`)
-    process.exit(1)
+    console.error(
+      `${chalk.red('Error!')} Please specify an input: ${chalk.grey(
+        'title "input"',
+      )}`,
+    );
+    process.exit(1);
   }
 
-  const specials = args['--special']
+  const specials = args['--special'];
 
-  const output = convert(sub, { specials })
-  const copy = !args['--no-copy']
+  const output = convert(sub, { specials });
+  const copy = !args['--no-copy'];
 
   if (copy) {
     try {
-      await clipboardy.write(output)
+      await clipboardy.write(output);
     } catch (err) {
-      console.error(`${chalk.red('Error!')} Could not write to clipboard`)
-      process.exit(1)
+      console.error(`${chalk.red('Error!')} Could not write to clipboard`);
+      process.exit(1);
     }
   }
 
-  console.log(`${output}${copy ? ' ' + chalk.blue('[copied]') : ''}`)
-}
+  console.log(`${output}${copy ? ` ${chalk.blue('[copied]')}` : ''}`);
+};
 
-main()
+main();

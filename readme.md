@@ -14,9 +14,9 @@ pnpm add title
 Then load it and convert any input:
 
 ```js
-const title = require('title')
+const title = require('title');
 
-title('tHe cHicaGo maNual oF StyLe')
+title('tHe cHicaGo maNual oF StyLe');
 
 // Will result in:
 // "The Chicago Manual of Style"
@@ -26,8 +26,8 @@ You can even pass words that should be capitalized as specified:
 
 ```js
 title('FaCEbook is great', {
-  special: [ 'facebook' ]
-})
+  special: ['facebook'],
+});
 
 // Will result in:
 // "facebook is great"
