@@ -33,7 +33,7 @@
     "format": "prettier --check .",
     "lint": "pnpm run lint-js && publint",
     "lint-js": "eslint --max-warnings=0 --ignore-path=.gitignore .",
-    "prepare": "pnpm run build",
+    "prepare": "husky install && pnpm run build",
     "prepublishOnly": "pnpm run lint && pnpm run test",
     "test": "vitest"
   },
@@ -46,6 +46,8 @@
     "@babel/plugin-syntax-import-attributes": "7.22.5",
     "@vercel/style-guide": "5.0.1",
     "eslint": "8.49.0",
+    "husky": "8.0.3",
+    "lint-staged": "14.0.1",
     "prettier": "3.0.3",
     "publint": "0.2.2",
     "unbuild": "2.0.0",
