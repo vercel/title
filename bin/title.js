@@ -1,14 +1,12 @@
 #!/usr/bin/env node
 
 // Packages
-const parse = require('arg')
-const { red, grey, blue } = require('chalk')
-const clipboardy = require('clipboardy')
-
-// Utilities
-const pkg = require('../package')
-const convert = require('../')
-const help = require('../lib/help')
+import parse from 'arg';
+import chalk from 'chalk';
+import clipboardy from 'clipboardy';
+import pkg from '../package.json' assert { type: 'json' };
+import convert from '../lib/index.js';
+import { helpText } from '../lib/help.js';
 
 // Parse the supplied commands and options
 const { _, ...args } = parse({
@@ -30,7 +28,7 @@ if (args['--version']) {
 }
 
 if (args['--help']) {
-  console.log(help)
+  console.log(helpText)
   process.exit(0)
 }
 
@@ -38,7 +36,7 @@ const main = async () => {
   const sub = _.join(' ')
 
   if (!sub) {
-    console.error(`${red('Error!')} Please specify an input: ${grey('title "input"')}`)
+    console.error(`${chalk.red('Error!')} Please specify an input: ${chalk.grey('title "input"')}`)
     process.exit(1)
   }
 
@@ -51,12 +49,12 @@ const main = async () => {
     try {
       await clipboardy.write(output)
     } catch (err) {
-      console.error(`${red('Error!')} Could not write to clipboard`)
+      console.error(`${chalk.red('Error!')} Could not write to clipboard`)
       process.exit(1)
     }
   }
 
-  console.log(`${output}${copy ? ' ' + blue('[copied]') : ''}`)
+  console.log(`${output}${copy ? ' ' + chalk.blue('[copied]') : ''}`)
 }
 
 main()
