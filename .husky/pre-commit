@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Disable concurrency to avoid potential race condition between file editing
+# tasks.
+pnpm exec lint-staged --concurrent false

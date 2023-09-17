@@ -8,15 +8,15 @@ Vercel's product names are capitalized properly as well.
 Firstly, install the package:
 
 ```bash
-yarn add title
+pnpm add title
 ```
 
 Then load it and convert any input:
 
 ```js
-const title = require('title')
+const title = require('title');
 
-title('tHe cHicaGo maNual oF StyLe')
+title('tHe cHicaGo maNual oF StyLe');
 
 // Will result in:
 // "The Chicago Manual of Style"
@@ -26,8 +26,8 @@ You can even pass words that should be capitalized as specified:
 
 ```js
 title('FaCEbook is great', {
-  special: [ 'facebook' ]
-})
+  special: ['facebook'],
+});
 
 // Will result in:
 // "facebook is great"
@@ -40,7 +40,7 @@ That's it!
 You can also convert titles in the command line, if you want. Install the package globally:
 
 ```bash
-yarn global add title
+pnpm add --global title
 ```
 
 Next, run it:
@@ -61,8 +61,8 @@ title -h
 ## Contributing
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device
-2. Uninstall `title` if it's already installed: `yarn global remove title`
-3. Link it to the global module directory: `yarn link`
+2. Uninstall `title` if it's already installed: `pnpm remove --global title`
+3. Link it to the global module directory: `pnpm link --global`
 
 After that, you can use the `title` command everywhere.
 
