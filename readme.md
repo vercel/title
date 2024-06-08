@@ -68,5 +68,5 @@ After that, you can use the `title` command everywhere.
 
 ## Authors
 
-- Leo Lamprecht ([@notquiteleo](https://twitter.com/notquiteleo))
+- Leo Lamprecht ([@leo](https://x.com/leo))
 - Josh Junon ([@Qix-](https://github.com/Qix-))
