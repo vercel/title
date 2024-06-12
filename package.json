@@ -2,11 +2,6 @@
   "name": "title",
   "version": "3.5.3",
   "description": "Capitalize your titles properly",
-  "main": "./lib/index.js",
-  "repository": "vercel/title",
-  "scripts": {
-    "test": "ava"
-  },
   "keywords": [
     "title",
     "capitalize",
@@ -15,22 +10,51 @@
     "of",
     "style"
   ],
+  "repository": "vercel/title",
+  "license": "MIT",
+  "author": "leo",
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/lib/index.cjs",
+      "import": "./dist/lib/index.mjs"
+    }
+  },
+  "main": "./dist/lib/index.cjs",
+  "module": "./dist/lib/index.mjs",
   "bin": {
-    "title": "./bin/title.js"
+    "title": "./dist/bin/title.mjs"
   },
   "files": [
-    "bin",
-    "lib"
+    "dist"
   ],
-  "author": "leo",
-  "license": "MIT",
+  "scripts": {
+    "build": "unbuild",
+    "format": "prettier --check .",
+    "lint": "pnpm run lint-js && publint",
+    "lint-js": "eslint --max-warnings=0 --ignore-path=.gitignore .",
+    "prepare": "husky install && pnpm run build",
+    "prepublishOnly": "pnpm run lint && pnpm run test",
+    "test": "vitest"
+  },
   "dependencies": {
     "arg": "1.0.0",
-    "chalk": "2.3.0",
-    "clipboardy": "1.2.2",
-    "titleize": "1.0.0"
+    "chalk": "5.3.0",
+    "clipboardy": "3.0.0"
   },
   "devDependencies": {
-    "ava": "0.25.0"
+    "@babel/plugin-syntax-import-attributes": "7.22.5",
+    "@vercel/style-guide": "5.0.1",
+    "eslint": "8.49.0",
+    "husky": "8.0.3",
+    "lint-staged": "14.0.1",
+    "prettier": "3.0.3",
+    "publint": "0.2.2",
+    "unbuild": "2.0.0",
+    "vitest": "0.34.4"
+  },
+  "packageManager": "pnpm@8.7.5",
+  "engines": {
+    "node": ">=18"
   }
 }
