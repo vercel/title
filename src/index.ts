@@ -5,9 +5,9 @@ import specials from './specials.js'
 const word = "[^\\s'’\\(\\)!?;:\"-]"
 const regex = new RegExp(`(?:(?:(\\s?(?:^|[.\\(\\)!?;:"-])\\s*)(${word}))|(${word}))(${word}*[’']*${word}*)`, "g")
 
-const convertToRegExp = specials => specials.map(s => [new RegExp(`\\b${s}\\b`, 'gi'), s])
+const convertToRegExp = (specials: string[]) => specials.map(s => [new RegExp(`\\b${s}\\b`, 'gi'), s])
 
-function parseMatch(match) {
+function parseMatch(match: string) {
   const firstCharacter = match[0]
 
   // test first character

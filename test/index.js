@@ -1,45 +1,45 @@
 // Packages
-const test = require('ava')
+import test from 'ava'
 
 // Source
-const title = require('../')
+import title from '../dist/index.js'
 
-test(t => {
+test('#1', t => {
   const from = 'aPi 2.0: lOG-in with zeit, new dOCs & more'
   const to = 'API 2.0: Log-In with ZEIT, New Docs & More'
 
   t.is(title(from), to)
 })
 
-test(t => {
+test('#2', t => {
   const from = 'updates TO hAndLinG of Failed paYMEnts'
   const to = 'Updates to Handling of Failed Payments'
 
   t.is(title(from), to)
 })
 
-test(t => {
+test('#3', t => {
   const from = 'toWArds NEXT.JS 5: Introducing cANaRY Updates'
   const to = 'Towards Next.js 5: Introducing Canary Updates'
 
   t.is(title(from), to)
 })
 
-test(t => {
+test('#4', t => {
   const from = 'noW deSktop and now cLI are prODUCts of zeIt'
   const to = 'Now Desktop and Now CLI Are Products of ZEIT'
 
   t.is(title(from), to)
 })
 
-test(t => {
+test('#5', t => {
   const from = 'capitalize your titles'
   const to = 'Capitalize Your Titles'
 
   t.is(title(from), to)
 })
 
-test(t => {
+test('#6', t => {
   const from = 'mY cusToM brand is awesome'
   const to = 'My Custom BRAnD Is awesoMe'
 
@@ -48,7 +48,7 @@ test(t => {
   }), to)
 })
 
-test(t => {
+test('#7', t => {
   const from = 'modify speCials like Facebook or microsoft'
   const to = 'Modify Specials like facebook or Microsoft'
 
@@ -57,7 +57,7 @@ test(t => {
   }), to)
 })
 
-test(t => {
+test('#8', t => {
   const from = "seattle’S BEST coffee & grandma's cookies"
   const to = "Seattle’s Best Coffee & Grandma's Cookies"
 

@@ -34,7 +34,7 @@
     "titleize": "1.0.0"
   },
   "devDependencies": {
-    "ava": "0.25.0",
+    "ava": "6.2.0",
     "typescript": "^5.6.3",
     "tsup": "^8.3.5"
   },
