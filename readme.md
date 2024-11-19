@@ -1,17 +1,16 @@
 # Title
 
-This package correctly capitalizes your titles as per [The Chicago Manual of Style](http://www.chicagomanualofstyle.org/home.html). Furthermore, all of
-Vercel's product names are capitalized properly as well.
+This package correctly capitalizes your titles as per [The Chicago Manual of Style](http://www.chicagomanualofstyle.org/home.html).
 
 ## Usage
 
-Firstly, install the package:
+Install the package:
 
 ```bash
-yarn add title
+pnpm add title
 ```
 
-Then load it and convert any input:
+Then, import it and convert any input text:
 
 ```js
 import title from 'title'
@@ -22,7 +21,7 @@ title('tHe cHicaGo maNual oF StyLe')
 // "The Chicago Manual of Style"
 ```
 
-You can even pass words that should be capitalized as specified:
+You can pass words that should be capitalized as specified:
 
 ```js
 title('FaCEbook is great', {
@@ -33,14 +32,12 @@ title('FaCEbook is great', {
 // "facebook is great"
 ```
 
-That's it!
-
 ### Command Line
 
-You can also convert titles in the command line, if you want. Install the package globally:
+You can also convert titles in the command line. Install the package globally:
 
 ```bash
-yarn global add title
+pnpm add -g title
 ```
 
 Next, run it:
@@ -61,8 +58,8 @@ title -h
 ## Contributing
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device
-2. Uninstall `title` if it's already installed: `yarn global remove title`
-3. Link it to the global module directory: `yarn link`
+2. Uninstall `title` if it's already installed: `pnpm remove -g title`
+3. Link it to the global module directory: `pnpm link`
 
 After that, you can use the `title` command everywhere.
 
