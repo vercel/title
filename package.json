@@ -5,7 +5,10 @@
   "main": "./lib/index.js",
   "repository": "vercel/title",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "pnpm build"
   },
   "type": "module",
   "keywords": [
@@ -17,11 +20,10 @@
     "style"
   ],
   "bin": {
-    "title": "./bin/title.js"
+    "title": "./dist/bin.js"
   },
   "files": [
-    "bin",
-    "lib"
+    "dist"
   ],
   "author": "leo",
   "license": "MIT",
@@ -33,7 +35,8 @@
   },
   "devDependencies": {
     "ava": "0.25.0",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "tsup": "^8.3.5"
   },
   "packageManager": "pnpm@9.13.2"
 }

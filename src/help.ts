@@ -1,5 +1,7 @@
 // Packages
-import { yellow } from 'chalk'
+import chalk from 'chalk'
+
+const { yellow } = chalk
 
 export default `
   Usage: ${yellow('title')} [options] <input>
