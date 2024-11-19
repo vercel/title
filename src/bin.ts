@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 
 // Packages
-const parse = require('arg')
-const { red, grey, blue } = require('chalk')
-const clipboardy = require('clipboardy')
+import parse from 'arg'
+import chalk from 'chalk'
+import clipboardy from 'clipboardy'
+
+const { red, grey, blue } = chalk
 
 // Utilities
-const pkg = require('../package')
-const convert = require('../')
-const help = require('../lib/help')
+import pkg from '../package.json'
+import title from './index.js'
+import { help } from './help'
 
 // Parse the supplied commands and options
 const { _, ...args } = parse({
@@ -42,9 +44,9 @@ const main = async () => {
     process.exit(1)
   }
 
-  const specials = args['--special']
+  const special = args['--special']
 
-  const output = convert(sub, { specials })
+  const output = title(sub, { special })
   const copy = !args['--no-copy']
 
   if (copy) {

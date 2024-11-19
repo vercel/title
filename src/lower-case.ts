@@ -86,7 +86,7 @@ const prepositions = [
   'without'
 ]
 
-export default new Set([
+export const lowerCase = new Set([
   ...conjunctions,
   ...articles,
   ...prepositions

@@ -1,13 +1,13 @@
 // Utilities
-import lowerCase from './lower-case.js'
-import specials from './specials.js'
+import { lowerCase } from './lower-case.js'
+import { specials } from './specials.js'
 
 const word = "[^\\s'’\\(\\)!?;:\"-]"
 const regex = new RegExp(`(?:(?:(\\s?(?:^|[.\\(\\)!?;:"-])\\s*)(${word}))|(${word}))(${word}*[’']*${word}*)`, "g")
 
-const convertToRegExp = (specials: string[]) => specials.map(s => [new RegExp(`\\b${s}\\b`, 'gi'), s])
+const convertToRegExp = (specials: string[]): [RegExp, string][] => specials.map(s => [new RegExp(`\\b${s}\\b`, 'gi'), s])
 
-function parseMatch(match: string) {
+function parseMatch(match: string): string | null {
   const firstCharacter = match[0]
 
   // test first character

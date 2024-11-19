@@ -11,6 +11,17 @@
     "prepublishOnly": "pnpm build"
   },
   "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
+    }
+  },
   "keywords": [
     "title",
     "capitalize",
@@ -28,12 +39,13 @@
   "author": "leo",
   "license": "MIT",
   "dependencies": {
-    "arg": "1.0.0",
+    "arg": "5.0.2",
     "chalk": "5.3.0",
-    "clipboardy": "1.2.2",
-    "titleize": "1.0.0"
+    "clipboardy": "4.0.0",
+    "titleize": "4.0.0"
   },
   "devDependencies": {
+    "@types/node": "^22.9.0",
     "ava": "6.2.0",
     "typescript": "^5.6.3",
     "tsup": "^8.3.5"

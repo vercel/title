@@ -3,7 +3,7 @@ import chalk from 'chalk'
 
 const { yellow } = chalk
 
-export default `
+export const help = `
   Usage: ${yellow('title')} [options] <input>
 
   Options:
