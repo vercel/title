@@ -1,7 +1,7 @@
 // Packages
-const { yellow, grey } = require('chalk')
+import { yellow } from 'chalk'
 
-module.exports = `
+export default `
   Usage: ${yellow('title')} [options] <input>
 
   Options:

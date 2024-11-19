@@ -1,6 +1,6 @@
 // Utilities
-const lowerCase = require('./lower-case')
-const specials = require('./specials')
+import lowerCase from './lower-case.js'
+import specials from './specials.js'
 
 const word = "[^\\s'’\\(\\)!?;:\"-]"
 const regex = new RegExp(`(?:(?:(\\s?(?:^|[.\\(\\)!?;:"-])\\s*)(${word}))|(${word}))(${word}*[’']*${word}*)`, "g")
@@ -23,7 +23,7 @@ function parseMatch(match) {
   return match
 }
 
-module.exports = (str, options = {}) => {
+export default (str: string, options:  { special?: string[] } = {}) => {
   str = str.toLowerCase().replace(regex, (m, lead = '', forced, lower, rest, offset, string) => {
     const isLastWord = m.length + offset >= string.length;
 

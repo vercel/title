@@ -60,4 +60,4 @@ const intended = [
   'JWTs'
 ]
 
-module.exports = intended
+export default intended
