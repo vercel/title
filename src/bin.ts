@@ -10,7 +10,7 @@ const { red, grey, blue } = chalk
 // Utilities
 import pkg from '../package.json'
 import title from './index.js'
-import { help } from './help'
+import { help } from './help.js'
 
 // Parse the supplied commands and options
 const { _, ...args } = parse({
