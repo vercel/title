@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "node16",
+    "declaration": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["esnext", "dom"],
+    "moduleResolution": "node16",
+    "resolveJsonModule": true
+  },
+  "exclude": ["dist"]
+}

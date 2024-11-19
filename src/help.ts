@@ -1,7 +1,9 @@
 // Packages
-const { yellow, grey } = require('chalk')
+import chalk from 'chalk'
 
-module.exports = `
+const { yellow } = chalk
+
+export const help = `
   Usage: ${yellow('title')} [options] <input>
 
   Options:
