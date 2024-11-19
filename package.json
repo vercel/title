@@ -40,8 +40,7 @@
   "dependencies": {
     "arg": "^5.0.0",
     "chalk": "^5.0.0",
-    "clipboardy": "^4.0.0",
-    "titleize": "^4.0.0"
+    "clipboardy": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",

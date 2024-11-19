@@ -17,9 +17,6 @@ importers:
       clipboardy:
         specifier: ^4.0.0
         version: 4.0.0
-      titleize:
-        specifier: ^4.0.0
-        version: 4.0.0
     devDependencies:
       '@types/node':
         specifier: ^22.9.0
@@ -1165,10 +1162,6 @@ packages:
     resolution: {integrity: sha512-Zc+8eJlFMvgatPZTl6A9L/yht8QqdmUNtURHaKZLmKBE12hNPSrqNkUp2cs3M/UKmNVVAMFQYSjYIVHDjW5zew==}
     engines: {node: '>=12.0.0'}
 
-  titleize@4.0.0:
-    resolution: {integrity: sha512-ZgUJ1K83rhdu7uh7EHAC2BgY5DzoX8V5rTvoWI4vFysggi6YjLe5gUXABPWAU7VkvGP7P/0YiWq+dcPeYDsf1g==}
-    engines: {node: '>=18'}
-
   to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
@@ -2269,8 +2262,6 @@ snapshots:
     dependencies:
       fdir: 6.4.2(picomatch@4.0.2)
       picomatch: 4.0.2
-
-  titleize@4.0.0: {}
 
   to-regex-range@5.0.1:
     dependencies:
