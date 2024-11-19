@@ -2,7 +2,7 @@
 import test from 'ava'
 
 // Source
-import title from '../dist/index.js'
+import title from '../dist/esm/index.js'
 
 test('#1', t => {
   const from = 'aPi 2.0: lOG-in with zeit, new dOCs & more'

@@ -4,21 +4,34 @@
   "description": "Capitalize your titles properly",
   "repository": "vercel/title",
   "scripts": {
-    "test": "ava",
+    "test": "ava && attw --pack .",
     "build": "tsup",
     "dev": "tsup --watch",
     "prepublishOnly": "pnpm build"
   },
   "type": "module",
+  "types": "./dist/esm/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.js"
+      },
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      }
     },
     "./*": {
-      "types": "./dist/*.d.ts",
-      "import": "./dist/*.js"
+      "require": {
+        "types": "./dist/cjs/*.d.cts",
+        "default": "./dist/cjs/*.js"
+      },
+      "import": {
+        "types": "./dist/esm/*.d.ts",
+        "default": "./dist/esm/*.js"
+      }
     }
   },
   "keywords": [
@@ -43,6 +56,7 @@
     "clipboardy": "^4.0.0"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.0",
     "@types/node": "^22.9.0",
     "ava": "6.2.0",
     "tsup": "^8.3.5",
