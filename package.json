@@ -2,10 +2,37 @@
   "name": "title",
   "version": "3.5.3",
   "description": "Capitalize your titles properly",
-  "main": "./lib/index.js",
   "repository": "vercel/title",
   "scripts": {
-    "test": "ava"
+    "test": "ava && attw --pack .",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "pnpm build"
+  },
+  "type": "module",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.js"
+      },
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      }
+    },
+    "./*": {
+      "require": {
+        "types": "./dist/cjs/*.d.cts",
+        "default": "./dist/cjs/*.js"
+      },
+      "import": {
+        "types": "./dist/esm/*.d.ts",
+        "default": "./dist/esm/*.js"
+      }
+    }
   },
   "keywords": [
     "title",
@@ -16,21 +43,24 @@
     "style"
   ],
   "bin": {
-    "title": "./bin/title.js"
+    "title": "./dist/bin.js"
   },
   "files": [
-    "bin",
-    "lib"
+    "dist"
   ],
   "author": "leo",
   "license": "MIT",
   "dependencies": {
-    "arg": "1.0.0",
-    "chalk": "2.3.0",
-    "clipboardy": "1.2.2",
-    "titleize": "1.0.0"
+    "arg": "^5.0.0",
+    "chalk": "^5.0.0",
+    "clipboardy": "^4.0.0"
   },
   "devDependencies": {
-    "ava": "0.25.0"
-  }
+    "@arethetypeswrong/cli": "^0.17.0",
+    "@types/node": "^22.9.0",
+    "ava": "6.2.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  },
+  "packageManager": "pnpm@9.13.2"
 }

@@ -1,4 +1,4 @@
-const intended = [
+export const specials = [
   'ZEIT',
   'ZEIT Inc.',
   'Vercel',
@@ -59,5 +59,3 @@ const intended = [
   'JWT',
   'JWTs'
 ]
-
-module.exports = intended

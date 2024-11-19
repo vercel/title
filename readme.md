@@ -14,7 +14,7 @@ yarn add title
 Then load it and convert any input:
 
 ```js
-const title = require('title')
+import title from 'title'
 
 title('tHe cHicaGo maNual oF StyLe')
 
