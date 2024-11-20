@@ -43,7 +43,7 @@
     "style"
   ],
   "bin": {
-    "title": "./dist/bin.js"
+    "title": "./dist/esm/bin.js"
   },
   "files": [
     "dist"
