@@ -4,7 +4,7 @@
   "description": "Capitalize your titles properly",
   "repository": "vercel/title",
   "scripts": {
-    "test": "ava && attw --pack .",
+    "test": "vitest run && attw --pack .",
     "build": "tsup",
     "dev": "tsup --watch",
     "prepublishOnly": "pnpm build"
@@ -58,9 +58,9 @@
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.0",
     "@types/node": "^22.9.0",
-    "ava": "6.2.0",
     "tsup": "^8.3.5",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vitest": "2.1.5"
   },
   "sideEffects": false,
   "packageManager": "pnpm@9.13.2"
