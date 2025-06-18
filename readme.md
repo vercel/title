@@ -29,7 +29,7 @@ title('FaCEbook is great', {
 })
 
 // Will result in:
-// "facebook is great"
+// "facebook is Great"
 ```
 
 ### Command Line
