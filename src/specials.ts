@@ -57,5 +57,8 @@ export const specials = [
   'GraphQL',
   'GraphiQL',
   'JWT',
-  'JWTs'
+  'JWTs',
+  'MCP',
+  'AI',
+  'OpenAI'
 ]
