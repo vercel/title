@@ -81,6 +81,7 @@ const prepositions = [
   'upon',
   'versus',
   'via',
+  'vs',
   'with',
   'within',
   'without'
