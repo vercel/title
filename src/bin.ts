@@ -2,10 +2,8 @@
 
 // Packages
 import parse from 'arg'
-import chalk from 'chalk'
+import { styleText } from 'node:util'
 import clipboardy from 'clipboardy'
-
-const { red, grey, blue } = chalk
 
 // Utilities
 import pkg from '../package.json'
@@ -40,7 +38,7 @@ const main = async () => {
   const sub = _.join(' ')
 
   if (!sub) {
-    console.error(`${red('Error!')} Please specify an input: ${grey('title "input"')}`)
+    console.error(`${styleText('red', 'Error!')} Please specify an input: ${styleText('grey', 'title "input"')}`)
     process.exit(1)
   }
 
@@ -53,12 +51,12 @@ const main = async () => {
     try {
       await clipboardy.write(output)
     } catch (err) {
-      console.error(`${red('Error!')} Could not write to clipboard`)
+      console.error(`${styleText('red', 'Error!')} Could not write to clipboard`)
       process.exit(1)
     }
   }
 
-  console.log(`${output}${copy ? ' ' + blue('[copied]') : ''}`)
+  console.log(`${output}${copy ? ' ' + styleText('blue', '[copied]') : ''}`)
 }
 
 main()
