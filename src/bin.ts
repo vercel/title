@@ -3,7 +3,7 @@
 // Packages
 import parse from 'arg'
 import chalk from 'chalk'
-import clipboardy from 'clipboardy'
+import { writeText } from 'tinyclip'
 
 const { red, grey, blue } = chalk
 
@@ -51,7 +51,7 @@ const main = async () => {
 
   if (copy) {
     try {
-      await clipboardy.write(output)
+      await writeText(output)
     } catch (err) {
       console.error(`${red('Error!')} Could not write to clipboard`)
       process.exit(1)
