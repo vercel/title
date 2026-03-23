@@ -10,27 +10,17 @@
     "prepublishOnly": "pnpm build"
   },
   "type": "module",
-  "types": "./dist/esm/index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
     ".": {
       "require": {
-        "types": "./dist/cjs/index.d.cts",
-        "default": "./dist/cjs/index.js"
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
       },
       "import": {
-        "types": "./dist/esm/index.d.ts",
-        "default": "./dist/esm/index.js"
-      }
-    },
-    "./*": {
-      "require": {
-        "types": "./dist/cjs/*.d.cts",
-        "default": "./dist/cjs/*.js"
-      },
-      "import": {
-        "types": "./dist/esm/*.d.ts",
-        "default": "./dist/esm/*.js"
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       }
     }
   },
@@ -43,7 +33,7 @@
     "style"
   ],
   "bin": {
-    "title": "./dist/esm/bin.js"
+    "title": "./dist/bin.js"
   },
   "files": [
     "dist"

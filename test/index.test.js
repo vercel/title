@@ -2,7 +2,7 @@
 import { describe, expect, test } from 'vitest'
 
 // Source
-import title from '../dist/esm/index.js'
+import title from '../dist/index.js'
 
 describe('Converting a string to title case', () => {
   test('should capitalize the first letter of relevant words', () => {
