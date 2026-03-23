@@ -8,7 +8,6 @@ import clipboardy from 'clipboardy'
 const { red, grey, blue } = chalk
 
 // Utilities
-import pkg from '../package.json'
 import title from './index.js'
 import { help } from './help.js'
 
@@ -27,7 +26,8 @@ const { _, ...args } = parse({
 // Output the package's version if
 // the `--version was supplied
 if (args['--version']) {
-  console.log(pkg.version)
+  // Injected at build time
+  console.log(process.env.PKG_VERSION);
   process.exit(0)
 }
 

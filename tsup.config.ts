@@ -1,28 +1,18 @@
-import { defineConfig, Options } from 'tsup'
-import fs from 'node:fs/promises'
-import path from 'node:path'
+import { defineConfig } from 'tsup';
+import { readFileSync } from 'node:fs';
 
-const sharedConfig: Options = {
+const { version } = JSON.parse(
+  readFileSync(new URL('./package.json', import.meta.url), 'utf-8'),
+);
+
+export default defineConfig({
   entry: ['src/**/*.ts'],
   clean: true,
   dts: true,
   bundle: false,
   splitting: true,
-}
-
-export default defineConfig([
-  {
-    format: 'esm',
-    outDir: 'dist/esm',
-    ...sharedConfig
+  define: {
+    'process.env.PKG_VERSION': JSON.stringify(version),
   },
-  {
-    format: 'cjs',
-    outDir: 'dist/cjs',
-    outExtension: () => ({ js: '.js' }),
-    async onSuccess() {
-      await fs.writeFile(path.resolve('dist', 'cjs', 'package.json'), '{"type": "commonjs","sideEffects":false}');
-    },
-    ...sharedConfig
-  },
-])
+  format: ['esm', 'cjs'],
+});
