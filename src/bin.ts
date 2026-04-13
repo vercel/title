@@ -21,7 +21,7 @@ const { values, positionals } = parseArgs({
     },
     help: {
       type: 'boolean',
-      short: 'b',
+      short: 'h',
     },
     'no-copy': {
       type: 'boolean',
