@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // Packages
-import parse from 'arg'
+import { parseArgs } from 'node:util'
 import chalk from 'chalk'
 import clipboardy from 'clipboardy'
 
@@ -13,41 +13,50 @@ import title from './index.js'
 import { help } from './help.js'
 
 // Parse the supplied commands and options
-const { _, ...args } = parse({
-  '--version': Boolean,
-  '--help': Boolean,
-  '--no-copy': Boolean,
-  '--special': [String],
-  '-v': '--version',
-  '-h': '--help',
-  '-n': '--no-copy',
-  '-s': '--special'
-})
+const { values, positionals } = parseArgs({
+  options: {
+    version: {
+      type: 'boolean',
+      short: 'v',
+    },
+    help: {
+      type: 'boolean',
+      short: 'h',
+    },
+    'no-copy': {
+      type: 'boolean',
+      short: 'n',
+    },
+    special: {
+      type: 'string',
+      short: 's',
+      multiple: true,
+    }
+  },
+  allowPositionals: true,
+});
 
 // Output the package's version if
 // the `--version was supplied
-if (args['--version']) {
+if (values.version) {
   console.log(pkg.version)
   process.exit(0)
 }
 
-if (args['--help']) {
+if (values.help) {
   console.log(help)
   process.exit(0)
 }
 
 const main = async () => {
-  const sub = _.join(' ')
-
+  const sub = positionals.join(' ')
   if (!sub) {
     console.error(`${red('Error!')} Please specify an input: ${grey('title "input"')}`)
     process.exit(1)
   }
 
-  const special = args['--special']
-
-  const output = title(sub, { special })
-  const copy = !args['--no-copy']
+  const output = title(sub, { special: values.special })
+  const copy = !values['no-copy']
 
   if (copy) {
     try {
